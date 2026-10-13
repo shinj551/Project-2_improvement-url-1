@@ -1,0 +1,170 @@
+/* Recipe for a NYC Day — warm, editorial, and easy to explore */
+* { box-sizing: border-box; }
+
+:root {
+  --paper: #f3f6f8;
+  --cream: #dce7ed;
+  --ink: #253747;
+  --muted: #657580;
+  --accent: #3d6f91;
+  --card: #ffffff;
+  --line: #c6d5df;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.7;
+}
+header {
+  text-align: center;
+  padding: 90px 24px;
+  background: var(--cream);
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+header::after {
+  content: "A CITY DAY, ONE SMALL MOMENT AT A TIME";
+  display: block;
+  margin-top: 28px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+}
+h1 {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+}
+header p {
+  margin: 20px auto 0;
+  max-width: 560px;
+  color: var(--muted);
+  font-size: clamp(16px, 2vw, 19px);
+}
+main { width: min(880px, 88%); margin: 56px auto 90px; }
+section { margin-bottom: 64px; }
+.ingredients {
+  padding: 35px;
+  background: var(--cream);
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(55, 40, 25, 0.04);
+}
+.ingredients h2 { margin: 0 0 20px; font-size: 28px; font-weight: 600; text-align: center;}
+.ingredients ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ingredients li {
+  padding: 12px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px; 
+  color: var(--muted); }
+
+.step {
+  margin-bottom: 30px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 25px; 
+  text-align: center; 
+}
+.step h2 {
+  margin: 0 0 22px;
+  font-size: clamp(25px, 4vw, 34px);
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: var(--accent);
+  text-align: center;
+}
+.step img {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  height: 330px;
+  margin: 0 auto 23px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+
+.step p { 
+  max-width: 600px; 
+  margin: 0 auto 15px; 
+  color: var(--muted); 
+  font-size: 17px; 
+  text-align: center; }
+
+.step img:hover{
+  transform: scale(1.03);
+}
+
+a {
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 180ms ease, background-color 180ms ease, opacity 180ms ease;
+}
+a:visited { color: var(--accent); }
+
+a:hover {
+  color: var(--ink);
+  background-color: var(--accent);
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0 0 0 5px var(--accent);
+}
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
+
+/* Writing box */
+#sentence-form {
+  max-width: 600px;
+  margin: 25px auto;
+  padding: 25px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+#day-sentence {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+}
+
+#sentence-form button {
+  padding: 12px 20px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#sentence-form button:hover {
+  opacity: 0.8;
+  background: var(--ink);
+}
+
+

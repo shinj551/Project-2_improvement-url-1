@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe for a NYC Day</title>
+  <link rel="stylesheet" href="style_improved.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Recipe for a NYC Day</h1>
+    <p>A little coffee, a subway ride, and a bit of luck.</p>
+  </header>
+
+  <main>
+
+    <!-- Ingredients -->
+    <section class="ingredients">
+      <h2>Ingredients</h2>
+
+      <ul>
+        <li>1 cup of coffee</li>
+        <li>1 pair of headphones</li>
+        <li>1 subway ride</li>
+        <li>1 new café</li>
+        <li>1 random store</li>
+        <li>1 photo</li>
+        <li>1 unexpected moment</li>
+      </ul>
+    </section>
+
+
+    <!-- Start -->
+    <section class="step">
+      
+      <img src="coffee.jpg" alt="A cup of coffee">
+      <div>
+      <h2>Start with coffee.</h2>
+      <p>Start your day with a cup of coffee.</p>
+      </div>
+    </section>
+
+
+    <!-- Step 1 -->
+    <section class="step">
+      <img src="headphones.jpg" alt="Headphones">
+      <div>
+      
+      <h2>01 — Choose a playlist</h2>
+      <p>
+        Put on your headphones and choose a
+        <a href="https://www.youtube.com/watch?v=9vHkUSsljXE&list=RD9vHkUSsljXE&start_radio=1" target="_blank">
+          playlist
+        </a>.
+      </p>
+      </div>
+    </section>
+
+
+    <!-- Step 2 -->
+    <section class="step">
+      <img src="subway-map.jpg" alt="New York City subway map">
+      <div>
+      <h2>02 — Take the subway</h2>
+      <p>
+        Take the subway to a different neighborhood.
+      </p>
+
+      <a href="https://www.mta.info/maps" target="_blank">
+        View the New York City subway map →
+      </a>
+      </div>
+    </section>
+
+
+    <!-- Step 3 -->
+    <section class="step">
+      <img src="cafe.jpg" alt="A New York City café">
+      <div>
+      <h2>03 — Find a café</h2>
+      <p>
+        Visit a café and stay for 15 minutes.
+      </p>
+
+      <a href="https://mycoffeeexplorer.com/guides/new-york#guide-neighborhood-4" target="_blank">
+        Find a café in New York →
+      </a>
+      </div>
+    </section>
+
+
+    <!-- Step 4 -->
+    <section class="step">
+      <img src="store.jpg" alt="A random New York City store">
+      <div>
+      <h2>04 — Find a random store</h2>
+      <p>
+        Enter a random store that catches your attention.
+      </p>
+      </div>
+    </section>
+
+
+    <!-- Step 5 -->
+    <section class="step">
+      <img src="photo.jpg" alt="An interesting photo from New York">
+      <div>
+      <h2>05 — Take a photo</h2>
+      <p>
+        Take a photo of something interesting.
+      </p>
+      </div>
+    </section>
+
+
+    <!-- Step 6 -->
+    <section class="step">
+      <img src="unexpected.jpg" alt="An unexpected moment in New York">
+      <div>
+      <h2>06 — Notice something unexpected</h2>
+      <p>
+        Notice one unexpected moment.
+      </p>
+      </div>
+    </section>
+
+
+    <!-- Step 7 -->
+    <section class="step">   
+      <img src="journal.jpg" alt="Writing about the day">
+      <div>
+      <h2>07 — Write about your day</h2>
+      <p>
+        Write one sentence about your day.
+      </p>
+
+      
+<form id="sentence-form">
+  <label for="day-sentence">Write your sentence:</label>
+
+  <textarea
+    id="day-sentence"
+    placeholder="Today in NYC, I..."
+    rows="3"
+    required
+  ></textarea>
+
+  <button type="submit">Save my sentence</button>
+  <p id="form-message"></p>
+</form>
+</div>
+</section>
+
+</main>
+
+<script>
+  document.getElementById("sentence-form")
+    .addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const sentence = document.getElementById("day-sentence").value;
+      document.getElementById("form-message").textContent =
+        "Your sentence: " + sentence;
+    });
+</script>
+    
+
+</body>
+</html>
